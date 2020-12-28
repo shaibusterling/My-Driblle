@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Dribble</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+  </head>
+
+<body>
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a><%= link_to "Dribble", shots_path, class:"navbar-brand"%></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <a><%= link_to "Shots", shots_path, class:"nav-link" %><span class="sr-only">(current)</span></a>
+            </li>
+            <% if user_signed_in? %>
+
+            <li class="nav-item"  >
+            <a><%= link_to "New Shot", new_shot_path, class:"nav-link btn btn-link" %></a>
+            </li>
+            <li class="nav-item">
+            <a ><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"nav-link" %></a>
+            </li>
+            <li class="nav-item">
+            <%= link_to edit_user_registration_path, class:"nav-link" do %>
+            <span class="glyphicon glyphicon-user"><%= current_user.name %></span> 
+            <%end%>
+            </li>
+
+            <% else %>
+            <li class="nav-item">
+            <a ><%= link_to "Signup", new_user_registration_path, class:"nav-link" %> </a>
+            </li>
+            <li class="nav-item">
+            <a ><%= link_to "Login", new_user_session_path, class:"nav-link " %></a>
+            </li>
+            <%end%>
+
+            </ul>
+            </div>
+          </nav>
+
+
+
+
+      <% if user_signed_in? %>
+        <div class="alert alert-link" >
+          <%= notice %> 
+        </div>
+
+      <%end%>
+
+
+  
+        <br>
+
+
+
+        <%= yield %>
+  
+  
+  
+  
+  
+  </body>
+</html>
+
+
+
+
+

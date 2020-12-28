@@ -1,0 +1,26 @@
+
+<div class="container">
+    <div id="indexleft" class="centerme">
+        <div  class="row">        
+            <% @shots.each do |shot| %>
+                <div class="col-sm, float-sm-left">
+                    <div class="index">
+                        <%= link_to image_tag(shot.user_kra.url (:thumb)), shot %>
+                        <%= shot.title %>
+                        <button type="button" class="btn btn-light"><%= link_to root_path(@shot) do %>
+                            <span class="glyphicon glyphicon-eye-open"></span> 
+                            <%end%>
+                        </button>         
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div> 
+</div>
+
+           
+            
+
+
+           
+    

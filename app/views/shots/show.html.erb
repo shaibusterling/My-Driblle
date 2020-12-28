@@ -1,0 +1,70 @@
+ 
+  
+
+
+
+  
+
+
+
+<div id ="showblack" class="container">
+
+  <h3>Netflix UI Concept</h3>
+  <p>Posted by: <%= current_user.name.capitalize%>  <%= time_ago_in_words(@shot.created_at)%> ago</p>
+    
+  <div class="showpadding">
+
+    <div class="show">
+      <div class="row">
+        <div class="col-4">
+          <%= image_tag @shot.user_kra_url (:full) unless @shot.user_kra.blank? %>
+        </div>
+      </div>
+    </div>
+
+      <div class="showbutt">
+        <%= link_to "Edit", edit_shot_path(@shot), class:"btn btn-basic" %>
+         <%= link_to "Delete", shot_path(@shot), method: :delete, data:{confirm: "Are you sure?"}, class: 'btn btn-basic' %>
+      </div>
+      <div class="showdetails">
+        <h3><%= @shot.title %></h3>
+        <p><%= @shot.description %></p>
+      </div>
+      
+      <h5 class="count"><%= pluralize(@shot.comments.count, "comments")%></h5>
+
+      <%= render @shot.comments %>
+
+      <div class="comments">
+
+        <% if user_signed_in? %>
+        <%= render "comments/form" %>
+        <% else %>
+        <%= link_to "Sign in", new_user_session_path, class:"btn btn-success" %>
+        <% end %> 
+    
+      </div>
+      
+  </div>
+
+</div>
+
+
+  
+<table class="showfloat">
+<tr>
+  <th class="glyphicon glyphicon-eye-open"> 0 Views </th>
+</tr>
+<tr>
+  <th class="glyphicon glyphicon-comment"> 0 </th>
+ 
+</tr>
+<tr>
+  <th class="glyphicon glyphicon-heart"> 0 </th>
+  
+</tr>
+
+</table>
+
+
+

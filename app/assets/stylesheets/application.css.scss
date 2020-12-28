@@ -1,0 +1,177 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import 'bootstrap/glyphicons';
+
+body{
+background-color: rgb(207, 207, 207);
+}
+
+
+
+
+.navnav{
+    background-color:black;
+height: 50px;
+margin-top:-16px;
+}
+
+
+
+
+
+
+.btn-default{
+    background-color:rgb(255, 8, 222);
+    height: 35px;
+    color: white;
+    padding: 4px;
+}
+
+
+
+
+.signup {
+    background-color: rgb(245, 244, 244);
+    width: 50%;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.newshot{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+h3{
+    text-align: center;
+}
+}
+
+
+.indexitems{
+background-color: red;
+width: 100%;
+}
+
+.index{
+    background-color: rgb(231, 231, 238);
+    margin: 10px;
+    height: min-content;
+    border-radius: 5px;
+    padding: 14px;
+width: min-content;
+text-align: right;
+
+}
+#indexleft{
+margin-left: auto;
+margin-right: auto;
+width: 87.5%;
+}
+
+
+
+.show{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+background-color: rgb(2, 2, 2);
+
+
+}
+
+.showbutt{
+    margin-top: 20px;
+
+
+}
+
+.showdetails{
+    margin-top: 20px;
+    background-color: white;
+padding: 20px;
+
+}
+
+
+
+.showpadding{
+    padding: 40px;
+    width: min-content;
+    background-color: rgb(255, 255, 255);
+    float: left;
+}
+
+
+
+.count{
+    padding: 20px;
+}
+
+
+
+
+.btn-basic{
+
+    background-color: rgb(240, 240, 240);
+}
+
+.showfloat{
+    display: absolute;
+float: left;
+margin-left: 60px;    
+border: 1px solid black;
+width: 20%;
+  th{
+        border: 1px solid black;
+        padding: 10px;
+    }
+    
+}
+
+
+
+.btn-link{
+    background-color: rgb(255, 116, 243);
+color: rgb(255, 255, 255);
+width: 90px;
+height: 30px;
+padding: 3px;
+margin-top: 4px;
+
+}
+
+
+.user-comment{
+    border-radius: 5px;
+margin: 30px;
+padding: 20px;
+box-shadow: 1px 1px 2px 2px rgb(196, 196, 196);
+background-color: white;
+}
+
+.form-comment{
+    width: 100%;
+    padding: 30px;
+h4{
+height: 80px;
+box-shadow: 0px 2px 0px 0px rgb(196, 193, 193);
+    }
+}
+
