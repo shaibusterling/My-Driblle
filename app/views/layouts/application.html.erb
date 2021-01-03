@@ -41,7 +41,14 @@
             <span class="glyphicon glyphicon-user"><%= current_user.name %></span> 
             <%end%>
             </li>
+            <li class="nav-item"  >
+            <a><%= link_to "New property", new_property_path, class:"nav-link" %></a>
+            </li>
 
+
+            <li class="nav-item"  >
+            <a><%= link_to "All properties", root_path, class:"nav-link" %></a>
+            </li>
             <% else %>
             <li class="nav-item">
             <a ><%= link_to "Signup", new_user_registration_path, class:"nav-link" %> </a>
@@ -58,12 +65,12 @@
 
 
 
-      <% if user_signed_in? %>
-        <div class="alert alert-link" >
-          <%= notice %> 
-        </div>
-
-      <%end%>
+          <% if user_signed_in? %>
+          <div class="alert alert-link" >
+            <%= notice %> 
+          </div>
+  
+        <%end%>
 
 
   

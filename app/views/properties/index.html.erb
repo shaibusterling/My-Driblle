@@ -1,0 +1,45 @@
+<div class="property-back">
+      <div class="domain">Domain</div>
+      <div class="help">How can we help?</div>
+      <div class="hero-info">
+        <div class="hero-items"> <img src="/assets/mail.ico" class="mail"><span>Sell my home</span></div>
+        <div class="hero-items"><img src="/assets/mail.ico" class="mail"><span>Manage my property</span></div>
+        <div class="hero-items"><img src="/assets/mail.ico" class="mail"><span>Other enquiry</span></div>
+      </div>
+
+      <div class="star">
+        <div class="star-text">
+          <h5>Domain Real Estates</h5>
+          <p>Teshie-Nungua Estates Number 208, 4th Floor </p>
+          <br>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis odit animi hic eum eos laudantium porro perferendis doloremque consequuntur esse magnam quo, qui nesciunt! Quaerat nostrum eum porro id laborum?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis odit animi hic eum eos laudantium porro perferendis doloremque consequuntur esse magnam quo, qui nesciunt! Quaerat nostrum eum porro id laborum?</p>
+          <br>
+          <img src="/assets/fb.ico" class="fb"><span><img src="/assets/twitter.ico" class="twitter"></span>
+          <div class="info-us">
+          <div class="call"><img src="/assets/phone.ico" class="mail"><span>Call us</span></div>
+          <div class="email"><img src="/assets/mail.ico" class="mail"><span>Email us</span></div>
+          </div>
+        </div>
+        <div class="star-images"></div>
+      </div>
+</div>
+
+<div class="properties">
+  <% @properties.each do |property| %>
+    <div class="property">
+      <%= link_to image_tag(property.user_kra.url (:full)), property %>
+      <div class="amenities">
+        <p><%= property.name.capitalize %></p>
+        <p><%= property.address %></p>
+        <i class="fa fa-bed"></i>
+        <%= property.rooms %>
+        <i class="fa fa-bath"></i>
+        <%= property.bathrooms %>
+      </div>
+    </div>
+</dv>
+<% end %>
+
+<br>
+

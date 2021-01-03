@@ -1,0 +1,22 @@
+
+
+<%= simple_form_for (@property), html: { mulitiparts: true } do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :rooms %>
+    <%= f.input :bathrooms %>
+    <%= f.input :user_kra, label: 'Upload file' %>
+    <%= f.hidden_field :user_kra_cache %>
+  </div>
+
+
+  <%= image_tag @property.user_kra_url (:thumb) unless @property.user_kra.blank? %>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

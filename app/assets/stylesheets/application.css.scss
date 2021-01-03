@@ -10,10 +10,23 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+*= require font-awesome
  *= require_tree .
  *= require_self
  */
+
  @import 'bootstrap/glyphicons';
+ @import "font-awesome";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 
 body{
 background-color: rgb(252, 252, 252);
@@ -105,7 +118,7 @@ background-color: rgb(2, 2, 2);
 .showdetails{
     margin-top: 20px;
     background-color: white;
-padding: 20px;
+    padding: 20px;
 
 }
 
@@ -145,10 +158,55 @@ width: 20%;
     
 }
 
+.domain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px;
+    width: 24%;
+    color: white;
+    font-weight: 300;
+    font-size: 36px;
+    background-color: black;
+
+
+}
+
+.hero-info{
+width: 80%;
+ display: flex;
+ height: 100px;
+ margin-top: 80px;
+
+}
+
+
+.hero-items{
+    border-radius: 5px;
+    height: 50px;
+    margin: 5px;
+    padding: 20px;
+    font-size: medium;
+    color: white;
+    background-color: rgb(228, 12, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.help{
+color: white;
+width:80% ;
+font-weight: 300;
+font-size: 70px;
+margin-top: 60px;
+}
+
 
 
 .btn-link{
-    background-color: rgb(255, 116, 243);
+background-color: rgb(255, 116, 243);
 color: rgb(255, 255, 255);
 width: 90px;
 height: 30px;
@@ -175,3 +233,130 @@ box-shadow: 0px 2px 0px 0px rgb(196, 193, 193);
     }
 }
 
+.star{
+width: 100%;
+height: 500px;
+display: flex;
+}
+
+
+.star-text{
+    padding-right:50px ;
+    color: white;
+    width: 44%;
+    padding: 10px;
+
+
+}
+
+
+.twitter {
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+
+.fb{
+    height: 25px;
+    margin-top: 10px;
+
+
+}
+
+.call, .email{
+    height: 50px;
+    width: 200px;
+    border: solid 1px white;
+    border-radius: 4px;
+}
+
+.star-images{
+    margin-top: 104px;
+    width: 50%;
+    height: 230px;
+    border: rgb(25, 0, 255) 1px solid;
+}
+
+.info-us{
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    margin-top: 37px;
+}
+.call, .email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail{
+    height: 23px;
+    padding-right: 5px;
+}
+
+
+
+.property-back{
+    background-image:  url(/assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 27px;
+    height: 150vh;
+    display: flex;
+    flex-flow: wrap;
+    align-content: flex-start;
+    padding-top: 80px;
+    padding-left: 100px;
+
+}
+
+.amenities{
+width: auto;    
+margin: auto;
+padding: 13px;
+font-size: 15px;
+}
+
+
+.bed{
+ height: 10px;
+    width: 10px;
+}
+
+
+.properties{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    flex-flow: wrap;
+    margin: auto;
+    
+
+
+}
+
+
+.property{
+    border: rgb(235, 235, 235) 1px solid;
+    box-shadow: rgb(231, 231, 231) 1px 1px 4px 4px;
+    width: 23%;
+    margin-left: auto;
+    margin-right: auto;
+    height: min-content;
+}
+.properties img{
+    width: 100%;
+    height: 200px;
+
+}
+
+
+
+
+.alert{
+
+    margin: 0;
+    padding: 0;
+}
