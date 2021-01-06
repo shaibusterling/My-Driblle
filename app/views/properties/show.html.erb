@@ -5,13 +5,13 @@
 <div class="show-big-items">
   <div class="show-big-items-links">
     <strong>Address:</strong> <%= @property.address %>
-    <p><strong>Price:</strong> </p>
+    <p><strong>Price:</strong> $ <%= @property.price %></p>
   </div>
   <div class="show-big-items-links">
     <strong>Name</strong> <p><%= @property.name %></p>
     <strong>Rooms</strong><p><i class="fa fa-bed"> <%= @property.rooms %></i></p>
     <strong>Bathrooms</strong><p><i class="fa fa-bath"> <%= @property.bathrooms %></i> </p>
-    <strong>Bathrooms</strong><p><i class="fa fa-car"></i> </p>
+    <strong>Parking spaces</strong><p><i class="fa fa-car"></i> <%= @property.parking_spaces %> </p>
 
     <p><%= link_to 'Edit', edit_property_path(@property), class:"btn btn-dark"%></p>
     <p><%= link_to 'Destroy', @property, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></p> 
