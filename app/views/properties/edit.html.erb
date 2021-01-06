@@ -1,6 +1,21 @@
-<h1>Editing Property</h1>
 
-<%= render 'form', property: @property %>
+<div class="edit">
+    <div class="side-bar">
+        <ul class="side-links">
+        <li><i class="fa fa-home"></i> Dashboard</li>
+        <li><i class="fa fa-th-large"></i> Properties</li>
+        <li><i class="fa fa-eye"></i> Viewings</li>
+        <li><i class="fa fa-users"></i> Customers</li>
+        <li><i class="fa fa-line-chart"></I> Reports</li>
+        <li>SAVED REPORTS</li>
+        <li><i class="fa fa-file"></i> This Month</li>
+        <li><i class="fa fa-file"></i> Engagement</li>
+        </ul>
+    </div>
 
-<%= link_to 'Show', @property %> |
-<%= link_to 'Back', properties_path %>
+    <div class="editing-form">
+        <h3>Editing Property</h3>
+        <br>
+        <%= render 'form', property: @property %>
+    </div>
+</div>
