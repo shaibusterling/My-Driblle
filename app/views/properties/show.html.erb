@@ -1,22 +1,24 @@
-<div class="show-big-img">
-<%= image_tag @property.user_kra_url (:full) unless @property.user_kra.blank? %>
+<div id="show-background">
+  <div class="show-big-img">
+    <%= image_tag @property.user_kra_url (:full) unless @property.user_kra.blank? %>
+  </div>
 </div>
-<br>
-<div class="show-big-items">
-  <div class="show-big-items-links">
-    <strong>Address:</strong> <%= @property.address %>
-    <p><strong>Price:</strong> $ <%= @property.price %></p>
-  </div>
-  <div class="show-big-items-links">
-    <strong>Name</strong> <p><%= @property.name %></p>
-    <strong>Rooms</strong><p><i class="fa fa-bed"> <%= @property.rooms %></i></p>
-    <strong>Bathrooms</strong><p><i class="fa fa-bath"> <%= @property.bathrooms %></i> </p>
-    <strong>Parking spaces</strong><p><i class="fa fa-car"></i> <%= @property.parking_spaces %> </p>
 
-    <p><%= link_to 'Edit', edit_property_path(@property), class:"btn btn-dark"%></p>
-    <p><%= link_to 'Destroy', @property, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></p> 
-  </div>
-
+  <br>
+  
+  <div class="show-big-items">
+    <div class="show-big-items-links">
+      <strong>Address:</strong> <%= @property.address %>
+      <p><strong>Price:</strong> $ <%= @property.price %></p>
+    </div>
+    <div class="show-big-items-links">
+      <strong>Name</strong> <p><%= @property.name %></p>
+      <strong>Rooms</strong><p><i class="fa fa-bed"> <%= @property.rooms %></i></p>
+      <strong>Bathrooms</strong><p><i class="fa fa-bath"> <%= @property.bathrooms %></i> </p>
+      <strong>Parking spaces</strong><p><i class="fa fa-car"></i> <%= @property.parking_spaces %> </p>
+      <p><%= link_to 'Edit', edit_property_path(@property), class:"btn btn-dark"%></p>
+      <p><%= link_to 'Destroy', @property, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></p> 
+    </div>
   
   
   <div class="Show-big-second">
@@ -40,16 +42,9 @@
   <div class="villa">
     <h1>Villa Bonita</h1>
     <h6>property discriptions</h6>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis magnam laboriosam voluptas dolorum neque dolorem quo accusantium sequi. Soluta a unde minima repudiandae porro commodi corrupti velit deleniti nesciunt tempore.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis magnam laboriosam voluptas dolorum neque dolorem quo accusantium sequi. Soluta a unde minima repudiandae porro commodi corrupti velit deleniti nesciunt tempore.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis magnam laboriosam voluptas dolorum neque dolorem quo accusantium sequi. Soluta a unde minima repudiandae porro commodi corrupti velit deleniti nesciunt tempore.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis magnam laboriosam voluptas dolorum neque dolorem quo accusantium sequi. Soluta a unde minima repudiandae porro commodi corrupti velit deleniti nesciunt tempore.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis magnam laboriosam voluptas dolorum neque dolorem quo accusantium sequi. Soluta a unde minima repudiandae porro commodi corrupti velit deleniti nesciunt tempore.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis magnam laboriosam voluptas dolorum neque dolorem quo accusantium sequi. Soluta a unde minima repudiandae porro commodi corrupti velit deleniti nesciunt tempore.</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis magnam laboriosam voluptas dolorum neque dolorem quo accusantium sequi. Soluta a unde minima repudiandae porro commodi corrupti velit deleniti nesciunt tempore.</p>
-    
+     <%= simple_format @property.details %>
     </div>
-  
+  <button id="toggleDetails">show more</button>
 </div>
 
 

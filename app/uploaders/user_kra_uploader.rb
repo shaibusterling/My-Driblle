@@ -31,12 +31,12 @@ class UserKraUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
    
   version :full do
-    process resize_to_fit: [600, 400]
+    process resize_to_fit: [1024, 1024]
   end
 
   
   version :thumb do
-     process resize_to_fill: [600, 600]
+     process resize_to_fit: [800, 800]
    end
 
   # Add a white list of extensions which are allowed to be uploaded.
